@@ -1,0 +1,7 @@
+#spring.mail.host=smtp.126.com
+#spring.mail.username=jazhouzq@126.com
+#spring.mail.password=hk745888585
+#spring.mail.default-encoding=UTF-8
+#spring.mail.properties.mail.smtp.auth=true
+#spring.mail.properties.mail.smtp.starttls.enable=true
+#spring.mail.properties.mail.smtp.stattls.required=true
