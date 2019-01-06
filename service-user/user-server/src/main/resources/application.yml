@@ -1,0 +1,15 @@
+
+logging:
+  level:
+    com.xbd.svc: debug
+
+#mybatis配置    
+mybatis:
+    type-aliases-package: com.xbd.hk.user.pojo
+    mapper-locations: classpath:mappers/*.xml
+
+#通用Mapper配置
+mapper:
+    not-empty: false
+    identity: MYSQL
+    

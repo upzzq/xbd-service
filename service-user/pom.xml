@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  
+  <artifactId>service-user</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  
+  <parent>
+  	<groupId>com.xbd.svc</groupId>
+    <artifactId>service-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+
+  <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+      <java.version>1.8</java.version>
+      <user-common.version>0.0.1-SNAPSHOT</user-common.version>
+      <common-base.version>0.0.1-SNAPSHOT</common-base.version>
+  </properties>
+
+  <dependencyManagement>
+
+  <dependencies>
+
+      <dependency>
+          <groupId>com.xbd.svc</groupId>
+          <artifactId>user-common</artifactId>
+          <version>${user-common.version}</version>
+      </dependency>
+      
+      <dependency>
+          <groupId>com.xbd.svc</groupId>
+          <artifactId>common-base</artifactId>
+          <version>${common-base.version}</version>
+      </dependency>
+
+  </dependencies>
+
+</dependencyManagement>
+  
+  <modules>
+    <module>user-server</module>
+    <module>user-common</module>
+    <module>user-client</module>
+  </modules>
+</project>
