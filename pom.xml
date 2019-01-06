@@ -1,0 +1,93 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <groupId>com.xbd.svc</groupId>
+  <artifactId>service-parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  
+  <parent>
+  	<groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>1.5.17.RELEASE</version>
+    <relativePath/>
+  </parent>
+  
+  <properties>
+  	<tk.mybatis.mapper.version>2.1.2</tk.mybatis.mapper.version>
+  	<pagehelper.version>1.2.10</pagehelper.version>
+  	<spring.cloud.version>Edgware.SR5</spring.cloud.version>
+  	<io.spring.platform.version>Brussels-SR15</io.spring.platform.version>
+  	<io.springfox.version>2.7.0</io.springfox.version>
+  	<druid.version>1.1.10</druid.version>
+  	<spring.admin.client.version>1.5.7</spring.admin.client.version>
+  	<fastjson.version>1.2.47</fastjson.version>
+  </properties>
+  
+  <dependencyManagement>
+  
+	<dependencies>
+		
+		 <dependency>
+            <groupId>io.spring.platform</groupId>
+            <artifactId>platform-bom</artifactId>
+            <version>${io.spring.platform.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+	
+		<dependency>
+          	<groupId>org.springframework.cloud</groupId>
+          	<artifactId>spring-cloud-dependencies</artifactId>
+          	<version>${spring.cloud.version}</version>
+          	<type>pom</type>
+          	<scope>import</scope>
+      	</dependency>
+      	
+   	    <dependency>
+	       <groupId>de.codecentric</groupId>
+	       <artifactId>spring-boot-admin-starter-client</artifactId>
+	       <version>${spring.admin.client.version}</version>
+	    </dependency>
+	
+		<dependency>
+		    <groupId>tk.mybatis</groupId>
+		    <artifactId>mapper-spring-boot-starter</artifactId>
+		    <version>${tk.mybatis.mapper.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.github.pagehelper</groupId>
+		    <artifactId>pagehelper-spring-boot-starter</artifactId>
+		    <version>${pagehelper.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>${io.springfox.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>${io.springfox.version}</version>
+		</dependency>
+		
+		<dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>${druid.version}</version>
+        </dependency>
+        
+		<dependency>
+		    <groupId>com.alibaba</groupId>
+		    <artifactId>fastjson</artifactId>
+		    <version>${fastjson.version}</version>
+		</dependency>
+        
+		
+	</dependencies>
+	
+  </dependencyManagement>
+</project>
