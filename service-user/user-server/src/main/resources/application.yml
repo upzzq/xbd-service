@@ -1,8 +1,4 @@
 
-logging:
-  level:
-    com.xbd.svc: debug
-
 #mybatis配置    
 mybatis:
     type-aliases-package: com.xbd.hk.user.pojo

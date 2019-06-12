@@ -1,18 +1,22 @@
 package com.xbd.svc.user.clients;
 
 import org.springframework.cloud.netflix.feign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
 import com.xbd.hk.user.vo.UserVO;
+
+import java.util.List;
 
 @FeignClient(name = "service-user")
 @RequestMapping("/user")
 public interface UserClient {
 
-	@GetMapping("/{userId}")
-	public UserVO getUserById(@PathVariable("userId") String userId);
+	@GetMapping("/getUserById")
+	UserVO getUserById(@RequestParam("userId") String userId);
+
+	@GetMapping(value = "/users")
+	String users(UserVO userVO);
 	
 	
 }

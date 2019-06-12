@@ -14,14 +14,15 @@
   </parent>
   
   <properties>
-  	<tk.mybatis.mapper.version>2.1.2</tk.mybatis.mapper.version>
-  	<pagehelper.version>1.2.10</pagehelper.version>
-  	<spring.cloud.version>Edgware.SR5</spring.cloud.version>
-  	<io.spring.platform.version>Brussels-SR15</io.spring.platform.version>
-  	<io.springfox.version>2.7.0</io.springfox.version>
-  	<druid.version>1.1.10</druid.version>
-  	<spring.admin.client.version>1.5.7</spring.admin.client.version>
-  	<fastjson.version>1.2.47</fastjson.version>
+	  <tk.mybatis.mapper.version>2.1.2</tk.mybatis.mapper.version>
+	  <pagehelper.version>1.2.10</pagehelper.version>
+	  <spring.cloud.version>Edgware.SR5</spring.cloud.version>
+	  <io.spring.platform.version>Brussels-SR15</io.spring.platform.version>
+	  <io.springfox.version>2.9.2</io.springfox.version>
+	  <druid.version>1.1.10</druid.version>
+	  <spring.admin.client.version>1.5.7</spring.admin.client.version>
+	  <fastjson.version>1.2.47</fastjson.version>
+	  <swagger.bootstrap.ui.version>1.9.3</swagger.bootstrap.ui.version>
   </properties>
   
   <dependencyManagement>
@@ -72,6 +73,12 @@
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>${io.springfox.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.xiaoymin</groupId>
+			<artifactId>swagger-bootstrap-ui</artifactId>
+			<version>${swagger.bootstrap.ui.version}</version>
 		</dependency>
 		
 		<dependency>

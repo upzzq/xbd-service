@@ -12,7 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringCloudApplication
 @ComponentScan(basePackages = "com.xbd.svc")
 @EnableFeignClients("com.xbd.svc")
-@EnableHystrixDashboard
+//@EnableHystrixDashboard
 public class ServiceProBbdApplication {
 
     public static void main(String[] args) {

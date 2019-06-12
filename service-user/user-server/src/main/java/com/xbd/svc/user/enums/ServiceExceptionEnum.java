@@ -5,7 +5,8 @@ import lombok.Getter;
 @Getter
 public enum ServiceExceptionEnum {
 	
-	ERROR_PARAM(200001, "参数错误")
+	ERROR_PARAM(200001, "参数错误"),
+	ERROR_Ex(200001, "异常报错啦,,,,,")
 	;
 	
 	private Integer code;

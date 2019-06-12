@@ -5,18 +5,9 @@ spring:
     config:
       discovery:
         enabled: true
-        service-id: server-config
+        service-id: server-config2
       profile: dev
-  #这只zipkin地址
-  zipkin:
-    base-url: http://127.0.0.1:9411/
-  #加了此配置才会把请求抽样发送到zipkin中查看服务调用链
-  sleuth:
-    sampler:
-      #请求抽样百分比,默认抽取百分之10(0.1f)到zipkin中,百分之十足够发现问题所在了,开发环境设置为100%
-      percentage: 1
-      
- 
+
  
 #hystrix超时配置
 hystrix:
@@ -31,11 +22,14 @@ feign:
   hystrix:
     enabled: true
 
-logging:
-  level:
-    org.springframework.cloud.netflix.feign: debug
       
-      
+eureka:
+  client:
+    service-url:
+      defaultZone: http://101.132.151.69:8761/eureka/
+  instance:
+    preferIpAddress: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
       
 # 仓库中的配置文件会被转换成web接口，访问可以参照以下的规则：
 #

@@ -23,23 +23,23 @@
 
   <dependencyManagement>
 
-  <dependencies>
+      <dependencies>
 
-      <dependency>
-          <groupId>com.xbd.svc</groupId>
-          <artifactId>user-common</artifactId>
-          <version>${user-common.version}</version>
-      </dependency>
-      
-      <dependency>
-          <groupId>com.xbd.svc</groupId>
-          <artifactId>common-base</artifactId>
-          <version>${common-base.version}</version>
-      </dependency>
+          <dependency>
+              <groupId>com.xbd.svc</groupId>
+              <artifactId>user-common</artifactId>
+              <version>${user-common.version}</version>
+          </dependency>
 
-  </dependencies>
+          <dependency>
+              <groupId>com.xbd.svc</groupId>
+              <artifactId>common-base</artifactId>
+              <version>${common-base.version}</version>
+          </dependency>
 
-</dependencyManagement>
+      </dependencies>
+
+  </dependencyManagement>
   
   <modules>
     <module>user-server</module>
